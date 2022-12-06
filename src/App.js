@@ -1,23 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import PostList from './Components/PostList/PostList';
+
 
 function App() {
+
+  const[postList, setPostLists] = useState([{name: 'George Kuether', post: 'This is the entirety of the first post. It is not a long post. It is not a short post. It is just here to do its job.'},])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <PostList postList={postList} />
+
     </div>
   );
 }
