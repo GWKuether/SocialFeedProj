@@ -1,0 +1,13 @@
+
+.inactive{
+    color: black;
+}
+
+
+.like-active{
+    color: green;
+}
+
+.dislike-active{
+    color: red;
+}
