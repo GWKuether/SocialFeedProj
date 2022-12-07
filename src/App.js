@@ -8,7 +8,7 @@ import './App.css'
 
 function App() {
 
-  const[postList, setPostLists] = useState([{name: 'George Kuether', date: '12-6-2022', post: 'This is the entirety of the first post. It is not a long post. It is not a short post. It is just here to do its job.' }])
+  const[postList, setPostLists] = useState([{name: 'George Kuether', date: '2022-12-06', post: 'This is the entirety of the first post. It is not a long post. It is not a short post. It is just here to do its job.' }])
 
 
   function addNewPost(newPost){
