@@ -5,9 +5,9 @@
 
 
 .like-active{
-    color: green;
+    background-color: green;
 }
 
 .dislike-active{
-    color: red;
+    background-color: red;
 }

@@ -1,0 +1,14 @@
+.border-box{
+    border: 1px;
+    border-style: solid;
+    border-color: black;
+    margin: 1px;
+    padding: 1em;
+}
+
+html, .main-background{
+    background-color: #95dee3;
+    height: 100%;
+    min-height: 100%;
+}
+

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './CreatePostForm.css'
 
 
 const CreatePostForm = (props) => {
@@ -11,8 +12,8 @@ const CreatePostForm = (props) => {
         event.preventDefault();
         let newPost = {
             name: name,
-            post: post,
-            date: date  
+            date: date,
+            post: post  
         }
         console.log(newPost)
         props.addNewPost(newPost)
@@ -20,15 +21,23 @@ const CreatePostForm = (props) => {
     }
     
     return (
-        <form onSubmit={handleSubmit}>
-            <label>Name</label>
-            <input type='text' value={name} onChange={(event) => setName(event.target.value)}/>
-            <label>Post</label>
-            <input type='text' value={post} onChange={(event) => setPost(event.target.value)} />
-            <label>Date</label>
-            <input type='date' value={date} onChange={(event) => setDate(event.target.value)} />
-            <button type='submit'>Create</button>
-        </form>
+            <div className='form-background'>
+                <form onSubmit={handleSubmit}>
+                    <div className='form-group'>
+                        <label>Name</label>
+                        <input type='text' className='form-control' value={name} onChange={(event) => setName(event.target.value)}/>
+                    </div>
+                    <div className='form-group'>   
+                        <label>Date</label>
+                        <input type='date' className='form-control' value={date} onChange={(event) => setDate(event.target.value)} />
+                    </div>
+                    <div className='form-group'>
+                        <label>Post</label>
+                        <input type='text' className='form-control' value={post} onChange={(event) => setPost(event.target.value)} />
+                    </div> 
+                        <button type='submit' className='btn btn-dark' style={{'margin-top': '1em'}}>Create</button>
+                </form>
+            </div>
 
      );
 }

@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import PostList from './Components/PostList/PostList';
 import CreatePostForm from './Components/CreatePostForm/CreatePostForm';
 import NavBar from './Components/NavBar/NavBar';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css'
 
 
 function App() {
@@ -15,11 +17,26 @@ function App() {
   }
 
   return (
-    <div>
-      <NavBar />
-      <CreatePostForm addNewPost={addNewPost} />
-      <PostList postList={postList} />
+    <div className='main-background'>
+      <div className='container-fluid'>
+        <div className='row'>
 
+          <NavBar />
+        </div>
+        <div className='row'>
+          <div className='col-3'>
+          </div>
+          <div className='col-6'>
+            <div className='border-box form-background'>
+              <CreatePostForm addNewPost={addNewPost} />
+            </div>
+            <div>
+              <PostList postList={postList} />
+            </div>
+          </div>
+          <div className='col-3'></div>
+        </div>
+      </div>
     </div>
   );
 }

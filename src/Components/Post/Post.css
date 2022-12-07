@@ -1,0 +1,11 @@
+.border-box{
+    border: 1px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 15px;
+    box-shadow: 5px 10px #888888
+}
+
+.post-background{
+    background-color: #d5f2f4;
+}

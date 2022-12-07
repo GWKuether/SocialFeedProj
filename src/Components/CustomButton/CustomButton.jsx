@@ -10,7 +10,10 @@ const CustomButton = (props) => {
 
     function handleClickLike(){
         if(buttonClassLike === "inactive"){
-            setButtonClassLike("like-active");
+            setButtonClassLike("like-active")
+            if (buttonClassDislike === "dislike-active"){
+                setButtonClassDislike("inactive")
+            }
         }
         else{
             setButtonClassLike("inactive")
@@ -20,7 +23,10 @@ const CustomButton = (props) => {
 
     function handleClickDislike(){
         if(buttonClassDislike === "inactive"){
-            setButtonClassDislike("dislike-active");
+            setButtonClassDislike("dislike-active")
+            if (buttonClassLike === "like-active"){
+                setButtonClassLike("inactive")
+            }
         }
         else{
             setButtonClassDislike("inactive")
@@ -29,11 +35,11 @@ const CustomButton = (props) => {
     }
     
     return (
-        <div>
-            <div>
+        <div className='d-flex flex-row'>
+            <div className='p-2'>
                 <button className={buttonClassLike} type="submit" onClick={handleClickLike}>Like</button>
             </div>
-            <div>
+            <div className='p-2'>
                 <button className={buttonClassDislike} type="submit" onClick={handleClickDislike}>Dislike</button>
             </div> 
         </div>
